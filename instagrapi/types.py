@@ -357,11 +357,11 @@ class ClipsMetadata(TypesBaseModel):
     is_public_chat_welcome_video: bool = False
     professional_clips_upsell_type: int = 0
     show_tips: Optional[str] = None
-    achievements_info: ClipsAchievementsInfo
-    additional_audio_info: ClipsAdditionalAudioInfo
+    achievements_info: Optional[ClipsAchievementsInfo]
+    additional_audio_info: Optional[ClipsAdditionalAudioInfo]
     asset_recommendation_info: Optional[dict] = None
-    audio_ranking_info: ClipsAudioRankingInfo | None
-    audio_type: str | None = "original_sounds"
+    audio_ranking_info: Optional[ClipsAudioRankingInfo]
+    audio_type: Optional[str] = "original_sounds"
     branded_content_tag_info: ClipsBrandedContentTagInfo
     breaking_content_info: Optional[dict] = None
     breaking_creator_info: Optional[dict] = None
@@ -369,13 +369,13 @@ class ClipsMetadata(TypesBaseModel):
     content_appreciation_info: ClipsContentAppreciationInfo
     contextual_highlight_info: Optional[dict] = None
     cutout_sticker_info: List[dict] = []
-    disable_use_in_clips_client_cache: bool = False
+    disable_use_in_clips_client_cache: Optional[bool] = False
     external_media_info: Optional[dict] = None
-    is_fan_club_promo_video: bool = False
+    is_fan_club_promo_video: Optional[bool] = False
     is_shared_to_fb: bool = False
-    mashup_info: ClipsMashupInfo
+    mashup_info: Optional[ClipsMashupInfo]
     merchandising_pill_info: Optional[dict] = None
-    music_canonical_id: str
+    music_canonical_id: Optional[str]
     music_info: Optional[dict] = None
     nux_info: Optional[dict] = None
     original_sound_info: Optional[ClipsOriginalSoundInfo] = None
@@ -384,7 +384,7 @@ class ClipsMetadata(TypesBaseModel):
     reusable_text_attribute_string: Optional[str] = None
     reusable_text_info: Optional[dict] = None
     shopping_info: Optional[dict] = None
-    show_achievements: bool = False
+    show_achievements: Optional[bool] = False
     template_info: Optional[dict] = None
     may_have_template_info: Optional[dict] = None
     viewer_interaction_settings: Optional[dict] = None
